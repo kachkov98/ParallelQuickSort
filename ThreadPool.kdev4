@@ -1,0 +1,4 @@
+[Project]
+Name=ThreadPool
+Manager=KDevCMakeManager
+VersionControl=kdevgit
