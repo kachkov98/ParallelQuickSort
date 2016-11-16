@@ -1,6 +1,9 @@
 cmake_minimum_required(VERSION 2.6)
 project(threadpool)
 
-add_executable(threadpool main.cpp)
+SET(CMAKE_CXX_FLAGS "-Wall -Wextra -Wpedantic -pthread -O2")
 
-install(TARGETS threadpool RUNTIME DESTINATION bin)
+add_library(threadpool STATIC threadpool.cpp)
+
+add_executable(qsort qsort.cpp)
+target_link_libraries(qsort threadpool)
